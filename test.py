@@ -6,7 +6,7 @@ class TreeStore:
         self.array = deepcopy(objects)
         self.map = dict()
         self.children = dict()
-        for obj in objects:
+        for obj in self.array:
             self.map[obj["id"]] = obj
             if obj["parent"] not in self.children:
                 self.children[obj["parent"]] = []
